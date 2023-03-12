@@ -22,7 +22,7 @@ public class SProyectos {
         return rProyectos.save(proyecto);
     }
     
-    public List<Proyectos> buscarProyectoses(){
+    public List<Proyectos> buscarProyectos(){
         return rProyectos.findAll();
     }
     

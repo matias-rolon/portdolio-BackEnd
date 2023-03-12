@@ -3,6 +3,7 @@ package com.ap.ap.services;
 
 import com.ap.ap.models.Usuario;
 import com.ap.ap.repository.RUsuario;
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,9 @@ public class SUsuario {
     
     public void borrarUsuario(Long id){
         rUsuario.deleteById(id);
+    }
+    
+    public Usuario buscarUsuarioPorId(Long id){
+        return rUsuario.findById(id).orElse(null);
     }
 }

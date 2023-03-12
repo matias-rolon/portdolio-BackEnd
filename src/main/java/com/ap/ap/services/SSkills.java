@@ -22,7 +22,7 @@ public class SSkills {
         return rSkills.save(skill);
     }
     
-    public List<Skills> buscarSkillses(){
+    public List<Skills> buscarSkills(){
         return rSkills.findAll();
     }
     

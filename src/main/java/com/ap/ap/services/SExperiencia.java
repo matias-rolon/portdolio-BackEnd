@@ -22,7 +22,7 @@ public class SExperiencia {
         return rExperiencia.save(experiencia);
     }
     
-    public List<Experiencia> buscarExperienciaes(){
+    public List<Experiencia> buscarExperiencias(){
         return rExperiencia.findAll();
     }
     
