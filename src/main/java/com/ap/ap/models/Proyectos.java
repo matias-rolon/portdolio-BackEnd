@@ -11,20 +11,24 @@ public class Proyectos {
     @GeneratedValue(strategy = GenerationType.AUTO) 
     private Long idPro;
     private String tituloPro;
-    private int fechaPro;
+    private int fechaInicioPro;
+    private int fechaFinPro;
     private String descPro;
     private String imagenPro;
 
     public Proyectos() {
     }
 
-    public Proyectos(Long idPro, String tituloPro, int fechaPro, String descPro, String imagenPro) {
+    public Proyectos(Long idPro, String tituloPro, int fechaInicioPro, int fechaFinPro, String descPro, String imagenPro) {
         this.idPro = idPro;
         this.tituloPro = tituloPro;
-        this.fechaPro = fechaPro;
+        this.fechaInicioPro = fechaInicioPro;
+        this.fechaFinPro = fechaFinPro;
         this.descPro = descPro;
         this.imagenPro = imagenPro;
     }
+
+    
 
     public Long getIdPro() {
         return idPro;
@@ -42,13 +46,23 @@ public class Proyectos {
         this.tituloPro = tituloPro;
     }
 
-    public int getFechaPro() {
-        return fechaPro;
+    public int getFechaInicioPro() {
+        return fechaInicioPro;
     }
 
-    public void setFechaPro(int fechaPro) {
-        this.fechaPro = fechaPro;
+    public void setFechaInicioPro(int fechaInicioPro) {
+        this.fechaInicioPro = fechaInicioPro;
     }
+
+    public int getFechaFinPro() {
+        return fechaFinPro;
+    }
+
+    public void setFechaFinPro(int fechaFinPro) {
+        this.fechaFinPro = fechaFinPro;
+    }
+
+    
 
     public String getDescPro() {
         return descPro;

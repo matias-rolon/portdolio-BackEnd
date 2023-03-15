@@ -37,9 +37,9 @@ public class CEducacion {
     }
     
     @PostMapping("/add")
-    public ResponseEntity<Educacion> crearEducacion(@RequestBody Educacion educacion){
-        Educacion nuevaEducacion=sEducacion.addEducacion(educacion);
-        return new ResponseEntity<>(nuevaEducacion, HttpStatus.CREATED);
+    public ResponseEntity<Educacion> crearExperiencia(@RequestBody Educacion educacion){
+        Educacion nuevaExperiencia=sEducacion.addEducacion(educacion);
+        return new ResponseEntity<>(nuevaExperiencia, HttpStatus.CREATED);
     }
     
     @DeleteMapping("/delte/{id}")
