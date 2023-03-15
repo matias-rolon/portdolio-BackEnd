@@ -41,7 +41,7 @@ public class CProyectos {
         return new ResponseEntity<>(nuevaProyectos, HttpStatus.CREATED);
     }
     
-    @DeleteMapping("/delte/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarProyectos(@PathVariable("id") Long id){
         sProyectos.borrarProyectos(id);
         return new ResponseEntity<>(HttpStatus.OK);

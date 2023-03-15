@@ -42,7 +42,7 @@ public class CEducacion {
         return new ResponseEntity<>(nuevaExperiencia, HttpStatus.CREATED);
     }
     
-    @DeleteMapping("/delte/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarEducacion(@PathVariable("id") Long id){
         sEducacion.borrarEducacion(id);
         return new ResponseEntity<>(HttpStatus.OK);

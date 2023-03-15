@@ -42,7 +42,7 @@ public class CSkills {
         return new ResponseEntity<>(nuevaSkills, HttpStatus.CREATED);
     }
     
-    @DeleteMapping("/delte/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarSkills(@PathVariable("id") Long id){
         sSkills.borrarSkills(id);
         return new ResponseEntity<>(HttpStatus.OK);

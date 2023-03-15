@@ -22,7 +22,7 @@ public class SUsuario {
         return rUsuario.save(user);
     }
     
-    public List<Usuario> buscarUsuarioes(){
+    public List<Usuario> buscarUsuarios(){
         return rUsuario.findAll();
     }
     

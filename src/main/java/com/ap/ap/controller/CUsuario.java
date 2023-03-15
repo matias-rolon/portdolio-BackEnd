@@ -5,8 +5,10 @@ import com.ap.ap.models.Usuario;
 import com.ap.ap.services.SUsuario;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +32,17 @@ public class CUsuario {
     public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario){
         Usuario updateUsuario= sUsuario.editarUsuario(usuario);
         return new ResponseEntity<>(updateUsuario, HttpStatus.OK);
+    }
+    
+    @PostMapping("/add")
+    public ResponseEntity<Usuario> crearSkills(@RequestBody Usuario usuario){
+        Usuario nuevoUsuario=sUsuario.addUsuario(usuario);
+        return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> borrarUsuario(@PathVariable("id") Long id){
+        sUsuario.borrarUsuario(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
