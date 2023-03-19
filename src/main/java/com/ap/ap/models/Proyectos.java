@@ -15,17 +15,19 @@ public class Proyectos {
     private int fechaFinPro;
     private String descPro;
     private String imagenPro;
+    private String urlPro;
 
     public Proyectos() {
     }
 
-    public Proyectos(Long idPro, String tituloPro, int fechaInicioPro, int fechaFinPro, String descPro, String imagenPro) {
+    public Proyectos(Long idPro, String tituloPro, int fechaInicioPro, int fechaFinPro, String descPro, String imagenPro, String urlPro) {
         this.idPro = idPro;
         this.tituloPro = tituloPro;
         this.fechaInicioPro = fechaInicioPro;
         this.fechaFinPro = fechaFinPro;
         this.descPro = descPro;
         this.imagenPro = imagenPro;
+        this.urlPro = urlPro;
     }
 
     
@@ -79,6 +81,12 @@ public class Proyectos {
     public void setImagenPro(String imagenPro) {
         this.imagenPro = imagenPro;
     }
-    
-    
+
+    public String getUrlPro() {
+        return urlPro;
+    }
+
+    public void setUrlPro(String urlPro) {
+        this.urlPro = urlPro;
+    }    
 }
