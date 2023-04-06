@@ -5,7 +5,6 @@ import com.ap.ap.Security.Entity.UserLogin;
 import com.ap.ap.Security.Repository.RUser;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class SUser {
     @Autowired
     RUser rUser;
-    
     public Optional<UserLogin> getByNombreUsuario(String nombreUsuario){
         return rUser.findByNombreUsuario(nombreUsuario);
     }

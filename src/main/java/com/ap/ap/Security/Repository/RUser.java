@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RUser extends JpaRepository<UserLogin, Integer>{
-    Optional<User> findByNombreUsuario(String nombreUsuario);
+    Optional<UserLogin> findByNombreUsuario(String nombreUsuario);
     
     boolean existsByNombreUsuario(String nombreUsuario);
     boolean existsByEmail(String email);
