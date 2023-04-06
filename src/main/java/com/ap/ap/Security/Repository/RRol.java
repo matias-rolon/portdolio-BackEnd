@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package com.ap.ap.Security.Repository;
 
-/**
- *
- * @author sonia
- */
-public interface RRol {
-    
+import com.ap.ap.Security.Entity.Rol;
+import com.ap.ap.Security.Enums.RolNombre;
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RRol extends JpaRepository<Rol, Integer>{
+    Optional<Rol> findByRolNombre(RolNombre rolNombre);
 }
