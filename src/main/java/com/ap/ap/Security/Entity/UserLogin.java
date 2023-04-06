@@ -89,7 +89,4 @@ public class UserLogin {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-
-    
-    
 }

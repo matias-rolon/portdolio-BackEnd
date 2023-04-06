@@ -15,7 +15,7 @@ public class SUser {
     @Autowired
     RUser rUser;
     
-    public Optional<User> getByNombreUsuario(String nombreUsuario){
+    public Optional<UserLogin> getByNombreUsuario(String nombreUsuario){
         return rUser.findByNombreUsuario(nombreUsuario);
     }
     
