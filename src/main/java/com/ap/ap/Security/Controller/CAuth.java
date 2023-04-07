@@ -2,6 +2,8 @@
 package com.ap.ap.Security.Controller;
 
 import com.ap.ap.Security.Dto.JwtDto;
+import com.ap.ap.Security.Dto.LoginUsuario;
+import com.ap.ap.Security.Dto.NuevoUsuario;
 import com.ap.ap.Security.Entity.Rol;
 import com.ap.ap.Security.Entity.UserLogin;
 import com.ap.ap.Security.Enums.RolNombre;
@@ -47,10 +49,10 @@ public class CAuth {
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos o email invalido"), HttpStatus.BAD_REQUEST);
         
-        if(sUser.existsByNombreUsuario(nombreUsuario.getNombreUsuario()))
+        if(sUser.existsByNombreUsuario(nuevoUsuario.getNombreUsuario()))
             return new ResponseEntity(new Mensaje("Ese nombre de usuario ya existe"), HttpStatus.BAD_REQUEST);
         
-        if(sUser.existsByEmail(nombreUsuario.getEmail()))
+        if(sUser.existsByEmail(nuevoUsuario.getEmail()))
             return new ResponseEntity(new Mensaje("Este email ya existe"), HttpStatus.BAD_REQUEST);
         
         UserLogin user = new UserLogin(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(), nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
