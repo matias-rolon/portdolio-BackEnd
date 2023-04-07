@@ -1,6 +1,7 @@
 
 package com.ap.ap.Security.Controller;
 
+import com.ap.ap.Security.Dto.JwtDto;
 import com.ap.ap.Security.Entity.Rol;
 import com.ap.ap.Security.Entity.UserLogin;
 import com.ap.ap.Security.Enums.RolNombre;
@@ -66,7 +67,7 @@ public class CAuth {
     }
     
     @PostMapping("/login")
-    public ResponseEntity<JwtDTO> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
+    public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos"), HttpStatus.BAD_REQUEST);
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
