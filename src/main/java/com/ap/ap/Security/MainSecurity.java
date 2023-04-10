@@ -36,18 +36,13 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
         return new BCryptPasswordEncoder();
     }
 
-@Override
-protected void configure(HttpSecurity http) throws Exception {
-    http.cors().and().csrf().disable().authorizeRequests().antMatchers("/auth/**").permitAll().anyRequest().authenticated().and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-}
-
-
     @Override
-    protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
+    protected void configure(HttpSecurity http) throws Exception {
+        http.cors().and().csrf().disable().authorizeRequests().antMatchers("/auth/**").permitAll().anyRequest().authenticated().and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
+    @Bean // Añade la anotación @Bean para que Spring pueda crear el bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }

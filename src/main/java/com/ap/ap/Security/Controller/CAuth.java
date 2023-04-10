@@ -36,7 +36,8 @@ public class CAuth {
     @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
-    AuthenticationManager authenticationManager;
+private AuthenticationManager authenticationManager;
+
     @Autowired
     SUser sUser;
     @Autowired
