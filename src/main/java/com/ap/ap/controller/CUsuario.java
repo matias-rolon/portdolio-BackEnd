@@ -35,7 +35,7 @@ public class CUsuario {
     }
     
     @PostMapping("/add")
-    public ResponseEntity<Usuario> crearSkills(@RequestBody Usuario usuario){
+    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario){
         Usuario nuevoUsuario=sUsuario.addUsuario(usuario);
         return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
     }
