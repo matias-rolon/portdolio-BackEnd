@@ -6,11 +6,9 @@ package com.ap.ap.repository;
 
 import com.ap.ap.models.LoginUser;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author sonia
- */
+@Repository
 public interface RLoginUser extends JpaRepository<LoginUser, Long>{
     
 }
