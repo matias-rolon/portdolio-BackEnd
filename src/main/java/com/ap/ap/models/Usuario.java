@@ -35,6 +35,9 @@ public class Usuario implements Serializable {
     
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPro")
     private List<Proyectos> proyectosList;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idLogin")
+    private List<LoginUser> loginUserList;
 
     public Usuario() {
     }
