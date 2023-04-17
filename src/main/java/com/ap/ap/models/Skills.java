@@ -2,9 +2,11 @@
 package com.ap.ap.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Skills {
@@ -15,6 +17,9 @@ public class Skills {
     private String fotoSkill;
     private int porcentaje;
     private String colorSkill;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Usuario usuario;
 
     public Skills() {
     }

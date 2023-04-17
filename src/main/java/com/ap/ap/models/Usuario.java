@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import java.io.Serializable;
 import java.util.List;
 
@@ -36,8 +37,8 @@ public class Usuario implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPro")
     private List<Proyectos> proyectosList;
     
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idLogin")
-    private List<LoginUser> loginUserList;
+    @OneToOne(fetch = FetchType.LAZY)
+    private LoginUser loginUserList;
 
     public Usuario() {
     }
