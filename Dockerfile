@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:17
 MAINTAINER Rolon
 COPY target/ap-0.0.1-SNAPSHOT.jar back-ap.jar
 ENTRYPOINT ["java","-jar","/back-ap.jar"]
