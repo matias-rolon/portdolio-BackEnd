@@ -20,6 +20,7 @@ com\ap\ap\controller\CUsuario.class
 com\ap\ap\controller\CEducacion.class
 com\ap\ap\repository\RExperiencia.class
 com\ap\ap\models\Proyectos.class
+WebConfig.class
 com\ap\ap\repository\RSkills.class
 com\ap\ap\services\SEducacion.class
 com\ap\ap\controller\CSkills.class
