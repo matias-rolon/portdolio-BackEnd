@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Educacion {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEdu;
     private String tituloEdu;
     private int fechaInicioEdu;
